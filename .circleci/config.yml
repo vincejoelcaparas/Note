@@ -8,10 +8,10 @@ jobs:
       - checkout
       - run: pip install -r requirements.txt
       - run:
-        name: run tests
-        command: PYTHONPATH=. pytest --maxfail=1 --disable-warnings -q
-      - run: flake8 .
-      - run: black --check .
+          name: run tests
+          command: PYTHONPATH=. pytest --maxfail=1 --disable-warnings -q
+      - run: flake8 app tests
+      - run: black --check app tests
       - run: coverage run -m pytest
       - run: coverage report
 
