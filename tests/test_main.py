@@ -1,5 +1,5 @@
 import json
-from app import app
+from app.main import app
 
 def test_create_note():
     client = app.test_client()
